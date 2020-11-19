@@ -8,7 +8,7 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="flutter_go"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/logo_android_studio">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
