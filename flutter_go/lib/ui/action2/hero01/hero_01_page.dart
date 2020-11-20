@@ -57,6 +57,7 @@ class Hero01Page extends StatelessWidget {
         child: Row(
           children: [
             Hero(
+              // 注意:tag唯一,在ListView中也是如此,所以需要在后面加上&index,保持tag的唯一性
               tag: 'photo$index',
               child: Material(
                   elevation: 3,
