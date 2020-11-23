@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_go/tool/animator/ActionTool.dart';
 import 'package:flutter_go/tool/assets/assets_tool.dart';
 import 'package:flutter_go/ui/action1/green01/green_01_child_01_page.dart';
 
@@ -10,7 +11,7 @@ class Green01Page extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: InkWell(
-          onTap: (){
+          onTap: () {
             Navigator.of(context).pop();
           },
           child: Icon(
@@ -83,10 +84,9 @@ class Green01Page extends StatelessWidget {
                         bottom: 50,
                         left: 40,
                         child: InkWell(
-                          onTap: (){
-                            Navigator.of(context).push(
-                              MaterialPageRoute(builder: (context)=>Green01Child01Page())
-                            );
+                          onTap: () {
+                            ActionTool.startHeroPage(
+                                context, Green01Child01Page());
                           },
                           child: Container(
                             alignment: Alignment(1, 1),
@@ -155,7 +155,7 @@ class Green01Page extends StatelessWidget {
                                         child: Text(
                                           'ml',
                                           style: TextStyle(
-                                              color:  Color(0x88ffffff),
+                                              color: Color(0x88ffffff),
                                               fontSize: 14),
                                         )),
                                     Positioned(
@@ -195,7 +195,7 @@ class Green01Page extends StatelessWidget {
                                         child: Text(
                                           '℃',
                                           style: TextStyle(
-                                              color:  Color(0x88ffffff),
+                                              color: Color(0x88ffffff),
                                               fontSize: 14),
                                         )),
                                     Positioned(
