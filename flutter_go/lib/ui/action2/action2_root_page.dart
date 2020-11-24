@@ -1,18 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_go/ui/action2/hero06/hero_06_page.dart';
 import 'hero01/hero_01_page.dart';
 import 'hero02/hero_02_page.dart';
 import 'hero03/hero_03_page.dart';
 import 'hero04/hero_04_page.dart';
+import 'hero05/hero_05_page.dart';
 
 class Action2RootPage extends StatelessWidget {
-  final List<String> titleList = ['Hero动画', '裁剪ClipPath','动画菜单1','动画菜单2'];
+  final List<String> titleList = [
+    'Hero动画',
+    '裁剪ClipPath',
+    '动画菜单1',
+    '动画菜单2',
+    'Path动画1',
+    'Path动画2'
+  ];
   final List<String> descList = [
     '让你的APP页面切换充满动效 不一样的体验 优美的视觉',
     '裁剪出一个动起来的贝塞尔图形',
     '自定义动画菜单1',
-    '自定义动画菜单2'
+    '自定义动画菜单2',
+    '自动画出一个矩形',
+    '自动画出一个五角星'
   ];
-  final List<Widget> pageList = [Hero01Page(), Hero02Page(),Hero03Page(),Hero04Page()];
+  final List<Widget> pageList = [
+    Hero01Page(),
+    Hero02Page(),
+    Hero03Page(),
+    Hero04Page(),
+    Hero05Page(),
+    Hero06Path()
+  ];
 
   @override
   Widget build(BuildContext context) {
