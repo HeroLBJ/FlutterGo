@@ -20,7 +20,7 @@ class _Hero02PageState extends State<Hero02Page>
         upperBound: 1.0,
         vsync: this,
         value: 0.0,
-        duration: Duration(seconds: 10));
+        duration: Duration(seconds: 5));
     _animationController.repeat();
   }
 
@@ -33,6 +33,7 @@ class _Hero02PageState extends State<Hero02Page>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       body: AnimatedBuilder(
         animation: _animationController,
         builder: (context, child) => ClipPath(
@@ -46,6 +47,13 @@ class _Hero02PageState extends State<Hero02Page>
                     colors: _colorList)),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.arrow_back_outlined),
+        backgroundColor: Colors.blueAccent,
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
       ),
     );
   }
@@ -63,8 +71,8 @@ class HeaderClipper extends CustomClipper<Path> {
     path.moveTo(0, 0);
     path.lineTo(0, size.height * 0.8);
 
-    double centerX = size.width * 0.5 + (size.width * 0.6 + 1) * sin(value*pi);
-    double centerY = size.height * 0.8 + 70 * cos(value*pi);
+    double centerX = size.width * 0.5 + (size.width * 0.5) * sin(value * pi);
+    double centerY = size.height * 0.8 + (size.height * 0.2) * cos(value * pi);
 
     // 二阶曲线
     path.quadraticBezierTo(
