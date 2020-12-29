@@ -166,6 +166,7 @@ class BubbleBean {
   Color bubbleColor;
 
   // 气泡的半径
+
   double bubbleRadius;
 
   // 气泡的速度
